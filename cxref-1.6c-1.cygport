@@ -1,0 +1,5 @@
+DESCRIPTION="C cross-referencing and documenting tool"
+HOMEPAGE="http://www.gedanken.demon.co.uk/cxref/"
+SRC_URI="http://www.gedanken.demon.co.uk/download-cxref/${P}.tgz"
+
+CYGCONF_ARGS="--enable-us-paper --without-cxref-cpp"
