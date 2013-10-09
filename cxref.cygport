@@ -1,0 +1,18 @@
+NAME="cxref"
+VERSION=1.6d
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="C cross-referencing and documenting tool"
+DESCRIPTION="Cxref is a program that will produce documentation (in LaTeX,
+HTML, RTF or SGML) including cross-references from C program source code.
+It has been designed to work with ANSI C, incorporating K&R, and most popular
+GNU extensions."
+REQUIRES="gcc-core"
+HOMEPAGE="http://www.gedanken.org.uk/software/cxref/"
+SRC_URI="${HOMEPAGE}/download/${NAME}-${VERSION}.tgz"
+PATCH_URI="
+	1.6d-Werror-implicit.patch
+	1.6d-vpath.patch
+"
+
+CYGCONF_ARGS="--enable-us-paper --without-cxref-cpp"

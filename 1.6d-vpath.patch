@@ -1,0 +1,19 @@
+--- origsrc/cxref-1.6d/src/Makefile.in	2011-08-26 12:50:15.000000000 -0500
++++ src/cxref-1.6d/src/Makefile.in	2013-10-09 16:30:18.072634200 -0500
+@@ -177,12 +177,12 @@ cpp_dir=@abs_top_builddir@/cpp
+ 	$(CC) -c $(CFLAGS) $< -o $@ $(INCLUDE)
+ 
+ cxref.o      : cxref.c      cxref.h datatype.h memory.h parse-yy.h version.h
+-	[ ! -f ../cpp/cxref-cpp ] || $(CC) -c $(CFLAGS) cxref.c -o $@ $(INCLUDE) "-DCXREF_CPP=\"$(cpp_dir)/cxref-cpp -cxref-cpp-defines $(cpp_dir)/cxref-cpp.defines -lang-c -C -dD -dI\""
+-	[   -f ../cpp/cxref-cpp ] || $(CC) -c $(CFLAGS) cxref.c -o $@ $(INCLUDE)
++	[ ! -f ../cpp/cxref-cpp ] || $(CC) -c $(CFLAGS) $(srcdir)/cxref.c -o $@ $(INCLUDE) "-DCXREF_CPP=\"$(cpp_dir)/cxref-cpp -cxref-cpp-defines $(cpp_dir)/cxref-cpp.defines -lang-c -C -dD -dI\""
++	[   -f ../cpp/cxref-cpp ] || $(CC) -c $(CFLAGS) $(srcdir)/cxref.c -o $@ $(INCLUDE)
+ 
+ cxref-inst.o : cxref.c      cxref.h datatype.h memory.h parse-yy.h
+-	[ ! -f ../cpp/cxref-cpp ] || $(CC) -c $(CFLAGS) cxref.c -o $@ $(INCLUDE) '-DCXREF_CPP="cxref-cpp -lang-c -C -dD -dI"'
+-	[   -f ../cpp/cxref-cpp ] || $(CC) -c $(CFLAGS) cxref.c -o $@ $(INCLUDE)
++	[ ! -f ../cpp/cxref-cpp ] || $(CC) -c $(CFLAGS) $(srcdir)/cxref.c -o $@ $(INCLUDE) '-DCXREF_CPP="cxref-cpp -lang-c -C -dD -dI"'
++	[   -f ../cpp/cxref-cpp ] || $(CC) -c $(CFLAGS) $(srcdir)/cxref.c -o $@ $(INCLUDE)
+ 
+ func.o       : func.c       cxref.h datatype.h memory.h parse-yy.h
+ type.o       : type.c       cxref.h datatype.h memory.h parse-yy.h

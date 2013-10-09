@@ -1,0 +1,10 @@
+--- origsrc/cxref-1.6d/cpp/configure.in	2010-12-27 03:55:02.000000000 -0600
++++ src/cxref-1.6d/cpp/configure.in	2013-10-09 15:47:40.493349000 -0500
+@@ -45,6 +45,7 @@ if test ! "x$GCC" = "x" ; then
+    AC_MSG_CHECKING([if installed gcc is new enough to use instead of cxref-cpp])
+ 
+    AC_TRY_RUN([
++   #include <stdlib.h>
+    int main()
+    {
+    #if defined(__GNUC__) && ( ( __GNUC__==2 && __GNUC_MINOR__>=8 ) || __GNUC__>=3 )

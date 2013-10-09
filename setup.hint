@@ -1,7 +1,0 @@
-category: Devel
-requires: gcc4
-sdesc: "C cross-referencing and documenting tool"
-ldesc: "Cxref is a program that will produce documentation (in LaTeX, 
-HTML, RTF or SGML) including cross-references from C program source 
-code. It has been designed to work with ANSI C, incorporating K&R, and 
-most popular GNU extensions."
